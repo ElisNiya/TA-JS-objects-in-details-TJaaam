@@ -28,4 +28,17 @@ const testData = {
   options: ['Tashkent', 'Amaan', 'Kuwait City', 'Nairobi'],
   correctAnswerIndex: 1,
 };
+
+
+function isAnswerCorrect(input){
+    if(input=== true){
+  
+      return correctAnswerIndex++;
+      }
+}
+
+function getCorrectAnswer(answer){
+  return answer;
+}
+
 ```
