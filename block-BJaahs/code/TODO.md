@@ -50,4 +50,23 @@ let question = {
   },
 };
 
+
+___________
+
+function createQuestion(title,options,correctAnswerIndex){
+  let question = {};
+  
+  question.title = title;
+  question.options = options;
+  question.correctAnswerIndex = correctAnswerIndex;
+    question.isAnswerCorrect = function(input){
+    return index === this.correctAnswerIndex;
+     },
+  question.getCorrectAnswer = function(){
+  return this.options[this.correctAnswerIndex];
+  },
+  return question;
+}
+
+const firstQ = createQuestion(  'Where is the capital of Jordan', ['Tashkent', 'Amaan', 'Kuwait City', 'Nairobi'], 1,)
 ```
