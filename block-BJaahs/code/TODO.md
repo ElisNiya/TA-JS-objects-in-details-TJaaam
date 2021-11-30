@@ -31,14 +31,23 @@ const testData = {
 
 
 function isAnswerCorrect(input){
-    if(input=== true){
-  
-      return correctAnswerIndex++;
-      }
+    return index === correctAnswerIndex
 }
 
-function getCorrectAnswer(answer){
-  return answer;
+function getCorrectAnswer(){
+  return options[correctAnswerIndex];
 }
+____________
+let question = {
+  title: 'Where is the capital of Jordan',
+  options: ['Tashkent', 'Amaan', 'Kuwait City', 'Nairobi'],
+  correctAnswerIndex: 1,
+  isAnswerCorrect(input){
+    return index === question.correctAnswerIndex;
+  },
+  getCorrectAnswer(){
+  return question.options[question.correctAnswerIndex];
+  },
+};
 
 ```
