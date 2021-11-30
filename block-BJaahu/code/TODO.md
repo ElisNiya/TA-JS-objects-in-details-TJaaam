@@ -22,6 +22,17 @@ For each different ways of creating object write different solutions.
 You can use the data given below. You will also have to change the name of the function while calling them.
 
 ```js
+class Question{
+  constructor(question, options, answerIndex){
+    this.question = question;
+    this.answer = answerIndex;
+  }
+  
+  
+}
+
+
+
 let firstQuestion = new Question(
   'Where is the capital of Jordan',
   ['Tashkent', 'Amaan', 'Kuwait City', 'Nairobi'],
@@ -32,4 +43,7 @@ let secondQuestion = new Question(
   ['Tashkent', 'Amaan', 'Kingston', 'Nairobi'],
   2
 );
+
+
+
 ```
