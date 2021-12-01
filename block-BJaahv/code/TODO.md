@@ -24,3 +24,20 @@ Create User (class/function) with the following properties.
   - [ ] decrementProject -> returns updated number of projects
 
 Write 2 tests for all the different ways of creating object. Test all the methods on these objects.
+class User {
+  constructor(name, id, noOfProjects){
+    this.name = name;
+    this.id = id;
+    this.noOfProjects= noOfProjects;
+  }
+  getProjects(){
+    return this.noOfProjects
+  }
+  changeName(newName){
+      this.name = newName;
+  }
+  incrementProject(){
+ 
+  }
+  decrementProject(){}
+}
