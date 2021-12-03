@@ -58,7 +58,9 @@ class User {
     return this.noOfProjects
   }
   changeName(newName){
+      let prevName = this.name
       this.name = newName;
+      return prevName;
   }
   incrementProject(){
     return noOfProjects++;
