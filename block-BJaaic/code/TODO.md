@@ -17,6 +17,27 @@ Methods
 
 - `summary()` - returns `I live in ${location} and I have ${numberOfLegs}`
 
+
+```js
+class Animal{
+constructor(location, numberOfLegs){
+  this.location = location;
+  this.numberOfLegs = numberOfLegs
+  }
+  eat(){
+  `I live in ${location} and I can eat`
+  }
+  changeLocation(newLocation){
+    this.location = newLocation;
+  }
+  summary(){
+    return `I live in ${location} and I have ${numberOfLegs}`
+  }
+}
+
+```
+
+
 #### Dog
 
 It will have all the properties and methods of the Animal. These are the extra properties and methods these dogs will have.
