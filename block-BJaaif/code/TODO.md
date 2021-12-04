@@ -9,6 +9,13 @@ Create a function that accepts two inputs (name and age) and returns an object. 
 3. add an `age` property to the newly created object with its value being the 'age' argument passed into the function
 4. return the object
 
+
+function makePerson(name,age){
+  let obj = {}
+  obj.name = name;
+  obj.age = age;
+  return obj
+}
 ## Using Object.create
 
 #### Challenge 1/3
