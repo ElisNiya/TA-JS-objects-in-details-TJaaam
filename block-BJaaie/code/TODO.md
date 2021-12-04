@@ -20,6 +20,27 @@ Methods
 
 - `summary()` - returns `I live in ${location} and I have ${numberOfLegs}`
 
+
+
+
+```js
+class Animal{
+constructor(location, numberOfLegs){
+  this.location = location;
+  this.numberOfLegs = numberOfLegs
+  }
+  eat(){
+  `I live in ${location} and I can eat`
+  }
+  changeLocation(newLocation){
+    this.location = newLocation;
+    return this.location;
+  }
+  summary(){
+    return `I live in ${location} and I have ${numberOfLegs}`
+  }
+}
+```
 #### Dog
 
 It will have all the properties and methods of the Animal. These are the extra properties and methods these dogs will have.
@@ -35,6 +56,28 @@ Methods:
 - `changeName(newName)` - accepts the name property and updates the name of the dog
 - `changeColor(newColor)` - accepts the new color and updates the color of the dog
 - `summary()` - returns `I am ${name} and I am of ${color} color. I can also bark`
+
+```js
+class Dog extends Animal{
+  constructor(name, color){
+    this.name = name,
+    this.color = color,
+    super(name, color)
+  }
+  bark(){
+  return `I am ${name} and I can bark 🐶`
+  }
+  changeName(newName){
+    this.name = newName;
+  }
+  changeColor(newColor){
+    this.color = newColor;
+  }
+  summary(){
+  return `I am ${name} and I am of ${color} color. I can also bark`
+  }
+}
+
 
 #### Cat
 
