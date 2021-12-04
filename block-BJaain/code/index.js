@@ -158,10 +158,10 @@ let person = {
   },
 };
 
-person.greet(); // output
+person.greet(); // output hello Jay
 
 let greet = person.greet;
-greet(); // output
+greet(); // output.   hello
 
 // -------------
 
@@ -178,14 +178,14 @@ let person = {
     return this.name;
   },
 };
-console.log(person.details.print()); // output?
-console.log(person.print()); // output?
+console.log(person.details.print()); // output?  Jay Details
+console.log(person.print()); // output?  Jay Person
 
 let name1 = person.print;
 let name2 = person.details;
 
-console.log(name1()); // output?
-console.log(name2.print()); // output?
+console.log(name1()); // output?  ""
+console.log(name2.print()); // output? error
 
 // --------
 
@@ -199,7 +199,7 @@ let outerFn = function () {
   return innerFn;
 };
 
-outerFn()();
+outerFn();  // not defined
 
 // -----------
 
@@ -208,9 +208,9 @@ let object = {
   dataDouble: [1, 2, 3],
   double: function () {
     console.log('this inside of outerFn double()');
-    console.log(this);
+    console.log(this);   // object
     return this.data.map(function (item) {
-      console.log(this); // Output ???
+      console.log(this); // Output ???  window
       return item * 2;
     });
   },
@@ -218,7 +218,7 @@ let object = {
     console.log('this inside of outerFn doubleArrow()');
     console.log(this);
     return this.dataDouble.map((item) => {
-      console.log(this); // Output ???
+      console.log(this); // Output ??? object
       return item * 2;
     });
   },
@@ -238,7 +238,7 @@ function print() {
 }
 
 let printNameBob = print.bind(bobObj);
-console.log(printNameBob()); // output??
+console.log(printNameBob()); // output??  //bob
 
 // -------------------
 
@@ -257,7 +257,7 @@ let obj2 = {
 };
 
 let getSecondData = obj2.printSecondData.bind(obj1);
-console.log(getSecondData()); // Output and why ???
+console.log(getSecondData()); // Output and why ???  //2
 
 // --------------
 
@@ -268,7 +268,7 @@ const call = {
   },
 };
 
-call.says(); // output ???
+call.says(); // output ??? hey mom just called
 
 // -----------------
 
@@ -281,7 +281,7 @@ const call = {
 
 let newCall = call.says;
 
-newCall(); // output ???
+newCall(); // output ??? // Hey undefined just called
 
 //  -----------------
 
@@ -299,4 +299,4 @@ const call = {
 
 let newCall = call.anotherCaller;
 
-newCall(); // output ??
+newCall(); // output ?? hey undefined just called
