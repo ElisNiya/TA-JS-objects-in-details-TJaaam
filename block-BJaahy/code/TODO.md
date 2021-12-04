@@ -58,11 +58,32 @@ static isEqual()
 - Create a getter method named `fullName` that will return the full name of the person.
 
 - Create a `fullName` setter method that will accept full name parameter of the person. It will update the `firstName` and `lastName` based on the input. Say if the user passed `Arya Stark` it will update the `firstName` to `Arya` and `lastName` to `Stark`. It will also change one condition if the length of the name passed is less than 5 characters it will alert a message saying `Full name should be more than 5 characters`
+```js
+class User{
+constructor(firstName, lastName)
+   this.firstName = firstName;
+   this.lastName = lastName
+}
+get fullName(){
+return `${this.firstName} ${this.lastName}`
+}
+set fullName(name){
+if(name.length < 5) {
+   alert(`Full name should be more than 5 characters`)
+}
+let firstName = name.split(' ')[0];
+let lastName = name.split(' ')[1];
+this.firstName = firstName;
+this.lastName = lastName;
+}
 
+```
 - Create a method named `nameContains` which will accept string and will return `true` or `false` based on if the name of the user contains the text that passed by user.
-
+nameContains(str){
+   return `${this.firstName} ${this.lastName}`.includes(string)
+}
 - Create two instance of the `User` class
-
+let user = new User('John', 'Stark')
 - Check by using the `fullName` setter method with name bigger than 5 characters.
 
 - Check by using the `fullName` setter method with name less than 5 characters.
