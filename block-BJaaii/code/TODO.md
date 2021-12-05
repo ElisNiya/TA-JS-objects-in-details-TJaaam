@@ -14,6 +14,30 @@ Data:
 
 - `stack`
 
+
+class Stack{
+  constructor(stack){
+    this.stack = stack;
+  }
+  push(value){
+    this.stack.push(value);
+  }
+  pop(){
+    this.stack.pop()
+  }
+  peek(){
+  
+  }
+  reverse(){
+  
+  }
+  isEmpty(){
+  
+  }
+  displayStack(){
+  
+  }
+}
 Methods:
 
 - `push`: will accept a value and add to the stack. Stack adds data at the end
