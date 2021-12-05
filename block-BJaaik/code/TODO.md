@@ -28,7 +28,7 @@ class Person {
 }
 
 class Player extends Person {
-  constructor(){
+  constructor(name, age,gender, sportsName){
    this.sportsName = sportsName
   }
   play(){
