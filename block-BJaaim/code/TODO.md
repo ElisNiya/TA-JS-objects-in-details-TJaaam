@@ -23,7 +23,41 @@ Check if the given answer is correct or not. It will accept one answer and retur
 - createUI (this will create the layout of a single question)
 
 This method will decide how the UI of a question look like. Calling this function should add the UI in the DOM.
+_______
+```js
 
+class Question{
+  constructor(title, options, answer){
+    this.title = title;
+    this.options = opstions;
+    this.answer = answer;
+  }
+  isCorrect(answer){
+      if(answer){
+        this.answer =true
+      } else {
+      this.answer = false
+      }
+  }
+  createUI(){
+      
+  }
+}
+```
+
+class Quizz{
+  constructor(allQuestions =[], activeIndex, score){
+  this.allQuestions = allQuestions
+  this.activeIndex = activeIndex
+  this.score = score
+  }
+  nextQuestion(){
+  }
+  createUI(){
+  }
+  updateScore(){
+  }
+}
 ### Make quiz class with these data and properties
 
 DATA:
