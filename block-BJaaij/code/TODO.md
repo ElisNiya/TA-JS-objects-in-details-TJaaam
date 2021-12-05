@@ -11,6 +11,39 @@
 4. isRead (default to `false`)
 5. finishedDate
 
+```js 
+class BookList{
+  constructor(title, category, author, isRead, finishedDate){
+    this.title = title;
+    this.category = category;
+    this.author = author;
+    this.isRead =  isRead;
+    this.finishedDate = finishedDate;
+  }
+  markBookAsRead(){
+    isRead = true;
+    finishedDate = Date.now()
+  }
+  let allBooks = [];
+  add([Book]){
+  
+  }
+ getCurrentBook(){
+ 
+ }
+ getNextBook(){
+ 
+ }
+ getPrevBook(){
+ 
+ }
+ changeCurrentBook(){
+ 
+ }
+ 
+}
+
+```
 Book class will have the following methods:
 
 - `markBookAsRead` when called will change the `isRead` property on the book to be `true`. It will also change the `finishedDate` to be the `Date.now()` when this function is called.
