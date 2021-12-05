@@ -12,36 +12,54 @@
 5. finishedDate
 
 ```js 
-class BookList{
+class Book {
   constructor(title, category, author, isRead, finishedDate){
     this.title = title;
     this.category = category;
     this.author = author;
-    this.isRead =  isRead;
-    this.finishedDate = finishedDate;
+    this.isRead =  false;
+    this.finishedDate = null;
   }
-  markBookAsRead(){
+   markBookAsRead(){
     isRead = true;
     finishedDate = Date.now()
   }
-  let allBooks = [];
-  add([Book]){
-  
+ } 
+  class BookList{
+ constructor(){
+ this.books = []
+ this.currentBooksIndex = 0;
+ }
+ 
+  add(books = []){
+    this.books = this.books.concat(books);
+    return this.books;
   }
  getCurrentBook(){
- 
+ return this.books[this.currentBooksIndex]
  }
  getNextBook(){
  
+  return this.books[this.currentBooksIndex +1]
+
  }
  getPrevBook(){
- 
+  return this.books[this.currentBooksIndex - 1]
+
  }
- changeCurrentBook(){
- 
+ changeCurrentBook(index){
+  this.currentBooksIndex = index;
+  return this.currentBooksIndex;
+
  }
  
 }
+
+let book1 = new Book()
+
+let library = new BookList();
+
+library.add([book1, book2, book3])
 
 ```
 Book class will have the following methods:
@@ -62,3 +80,5 @@ Book class will have the following methods:
 - [] `changeCurrentBook` should accept one parameter and update the current index.
 
 After creating the Book and BookList class create 5 book object and add it to list. Test all the methods in Book and BookList class.
+
+
