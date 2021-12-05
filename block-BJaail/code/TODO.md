@@ -8,3 +8,28 @@ You should have the following features in the bookly app:
 - User can delete the book
 
 ![DEMO](../assets/bookly.png)
+
+
+class Book(){
+constructor(name, author, url){
+    this.name = name;
+    this.author = author;
+    this.url = url;
+}
+    let isRead = false;
+}
+
+class BookList extends Book{
+  constructor(){
+  super(name, author, url)
+  }
+  addBook(){
+  let newBook = new Book('The Davinci Code', authorname, url);
+  this.isRead = true;
+  }
+ 
+  } 
+  deleteBook(){
+    
+  }
+}
